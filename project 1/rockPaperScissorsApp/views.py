@@ -3,8 +3,8 @@ import random
 
 def home(request):
     result = None
-    if 'weapon' in request.GET:
-        user_choice = request.GET['weapon']
+    if request.method == 'POST':
+        user_choice = request.POST['weapon']
         computer_choice = random.choice(['rock', 'paper', 'scissors'])
         result = determine_winner(user_choice, computer_choice)
     return render(request, 'rockPaperScissorsApp/home.html', {'result': result})

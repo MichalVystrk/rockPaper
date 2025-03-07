@@ -8,7 +8,8 @@
 <body>
 <h1>Welcome to Rock Paper Scissors</h1>
 <p>Choose your weapon:</p>
-<form method='get'> 
+<form method='post'> 
+    {% csrf_token %}
     <button type="submit" name="weapon" value="rock">Rock</button>
     <button type="submit" name="weapon" value="paper">Paper</button>
     <button type="submit" name="weapon" value="scissors">Scissors</button>
