@@ -1,0 +1,13 @@
+body {
+    background-color: #0A050F;
+}
+.heading {
+    font-size: 70px;
+    font-weight: 600;
+    background-image: linear-gradient(to left, #FFEAEC, #6DB1BF);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    display: flex;
+    text-align: center;
+  }
