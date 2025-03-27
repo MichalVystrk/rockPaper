@@ -1,4 +1,4 @@
-    body {
+body {
     background-color: #0A050F;
     font-family: 'Roboto', sans-serif;
 }
@@ -93,3 +93,13 @@ html {
     position: relative;
     z-index: 3;
 }
+
+#visuals {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.choiceCaption {
+    max-width: 5vh;
+} 

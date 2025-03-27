@@ -5,16 +5,6 @@ def home(request):
     result = None
     if request.method == 'POST':
         user_choice = request.POST['weapon']
-        computer_choice = random.choice(['rock', 'paper', 'scissors'])
-        result = determine_winner(user_choice, computer_choice)
-    return render(request, 'rockPaperScissorsApp/home.html', {'result': result})
-
-def determine_winner(user_choice, computer_choice):
-    if user_choice == computer_choice:
-        return f"Both chose {user_choice}. It's a tie!"
-    elif (user_choice == 'rock' and computer_choice == 'scissors') or \
-         (user_choice == 'paper' and computer_choice == 'rock') or \
-         (user_choice == 'scissors' and computer_choice == 'paper'):
-        return f"You chose {user_choice} and the computer chose {computer_choice}. You win!"
-    else:
-        return f"You chose {user_choice} and the computer chose {computer_choice}. You lose!"
+        computer_choice = random.choice(['rockPaperScissorsApp/images/gameSighns/Rock.png', 'rockPaperScissorsApp/images/gameSighns/Paper.png', 'rockPaperScissorsApp/images/gameSighns/Scissors.png'])
+    return render(request, 'rockPaperScissorsApp/home.html', {'userChoice': user_choice, 'computerChoice': computer_choice})
+    

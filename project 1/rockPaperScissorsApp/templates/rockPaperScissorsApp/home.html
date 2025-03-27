@@ -15,20 +15,29 @@
 <p class="p">Choose your weapon:</p>
 <form class="choices" method='post'> 
     {% csrf_token %}
-    <button type="submit" name="weapon" value="rock" class="weapon">
+    <button type="submit" name="weapon" value="rockPaperScissorsApp/images/gameSighns/Rock.png" class="weapon">
         <a href="#"><span>Rock</span></a>
     </button>
-    <button type="submit" name="weapon" value="paper" class="weapon">
+    <button type="submit" name="weapon" value="rockPaperScissorsApp/images/gameSighns/Paper.png" class="weapon">
         <a href="#"><span>Paper</span></a>
     </button>
-    <button type="submit" name="weapon" value="scissors" class="weapon">
+    <button type="submit" name="weapon" value="rockPaperScissorsApp/images/gameSighns/Scissors.png" class="weapon">
         <a href="#"><span>Scissors</span></a>
     </button>
 </form>
-<div id="result">
-    {% if result %}
-        <p>{{ result }}</p>
-    {% endif %}
+<div id="visuals">
+    <div id="userChoice">
+        <p class="choiceCaption">User Choice</p>
+        <img src="{% static userChoice %}" alt="">
+    </div>
+    <div id="computerChoice">
+        <p class="choiceCaption">Computer Choice</p>
+        <img src="{% static computerChoice %}" alt="">
+    </div>
+    <div>
+        <h2>You not won blah blah</h2>
+    </div>
+    
 </div>
 </body>
 </html>
