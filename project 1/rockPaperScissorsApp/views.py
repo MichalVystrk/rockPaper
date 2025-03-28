@@ -9,7 +9,7 @@ def home(request):
         userChoice = request.POST['weapon']
         computerChoice = random.choice(['rockPaperScissorsApp/images/gameSighns/Rock.png', 'rockPaperScissorsApp/images/gameSighns/Paper.png', 'rockPaperScissorsApp/images/gameSighns/Scissors.png'])
     result = determanWinner(userChoice, computerChoice)
-    return render(request, 'rockPaperScissorsApp/home.html', {'userChoice': userChoice, 'computerChoice': computerChoice})
+    return render(request, 'rockPaperScissorsApp/home.html', {'userChoice': userChoice, 'computerChoice': computerChoice, 'result': result})
 
 def determanWinner(userChoice, computerChoice):
     if userChoice == computerChoice:
