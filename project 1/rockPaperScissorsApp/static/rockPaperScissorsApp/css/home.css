@@ -98,8 +98,28 @@ html {
     display: flex;
     justify-content: center;
     flex-direction: row;
+    max-width: 1vh;
+    min-width: 90vw;
 }
 
-.choiceCaption {
-    max-width: 5vh;
-} 
+#visuals div {
+    display: flex;
+}
+
+#visuals img {
+    max-height: 35vh;
+}
+
+#visuals .imgContainer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 40px;
+}
+
+#visuals .choiceCaption {
+    color: #fefefe;
+    text-align: center;
+    font-weight: 800;
+    font-size: 2rem;
+}
