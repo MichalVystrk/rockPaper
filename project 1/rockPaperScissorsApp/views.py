@@ -14,10 +14,19 @@ def home(request):
 def determanWinner(userChoice, computerChoice):
     if userChoice == computerChoice:
         return 'It\'s a tie!'
-    if userChoice == 'rock' and computerChoice == 'scissors':
-        return 'You win!'
-    if userChoice == 'paper' and computerChoice == 'rock':
-        return 'You win!'
-    if userChoice == 'scissors' and computerChoice == 'paper':
-        return 'You win!'
-    return 'You lose!'
+    if userChoice == 'rockPaperScissorsApp/images/gameSighns/Rock.png':
+        if computerChoice == 'rockPaperScissorsApp/images/gameSighns/Scissors.png':
+            return 'You win!'
+        elif computerChoice == 'rockPaperScissorsApp/images/gameSighns/Paper.png':
+            return 'You lose!'
+    elif userChoice == 'rockPaperScissorsApp/images/gameSighns/Paper.png':
+        if computerChoice == 'rockPaperScissorsApp/images/gameSighns/Rock.png':
+            return 'You win!'
+        elif computerChoice == 'rockPaperScissorsApp/images/gameSighns/Scissors.png':
+            return 'You lose!'
+    elif userChoice == 'rockPaperScissorsApp/images/gameSighns/Scissors.png':
+        if computerChoice == 'rockPaperScissorsApp/images/gameSighns/Paper.png':
+            return 'You win!'
+        elif computerChoice == 'rockPaperScissorsApp/images/gameSighns/Rock.png':
+            return 'You lose!'
+    return 'Invalid choice!'
